@@ -5,14 +5,6 @@ error_reporting(E_ALL);
 
 include_once('resources/init.php');
 
-if (empty($_GET)) {
-    $posts = get_posts(null, null);
-} else {
-    $posts = get_posts(null, $_GET['id']);
-}
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -32,11 +24,19 @@ if (empty($_GET)) {
 				<?php include "includes/_nav.php" ?>
 				<hr>
 				<br>
-                <div class="content">
-                    <h2 align="center">
-                        Category added successfully
-                    </h2>
-                </div>
+				<div class="content">
+					<h2 align="center">
+						<?php
+							if($_GET['type'] == 'delete'){
+								echo "Deleted successfully";
+							}
+							else if ($_GET['type'] == 'add') {
+								echo "Added successfully";
+							}
+						?>
+						
+					</h2>
+				</div>
                 
 
 
