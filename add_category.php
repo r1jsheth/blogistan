@@ -28,7 +28,7 @@ if ( isset($_POST['name']) && !empty($_POST['name']) ) {
 
 	if (empty($error)) {
 		fun_add_category($catName);
-		// header("Location: success.php");
+		header("Location: success.php");
 	}
 }
 
