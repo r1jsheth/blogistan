@@ -51,7 +51,7 @@ $posts = get_posts(((isset($_GET['id'])) ? $_GET['id'] : null));
 
 						<div class="post-functions">
 							<ul>
-								<li><a href="delete_post.php?id=<?php echo $post["post_id"]; ?>"> Delete this post</a></li>
+								<li><a href="delete_post.php?id=<?php echo $post["post_id"]; ?>">Delete this post</a></li>
 								<li><a href="edit_post.php?id=<?php echo $post['post_id']; ?>"> Edit post</a></li>
 							</ul>
 						</div>
