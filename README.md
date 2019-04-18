@@ -3,7 +3,7 @@
 ### Directory Structure 
 
     ├── css                         
-    │   ├── main.css                # CSS file which styles each page in this project
+    │   └── main.css                # CSS file which styles each page in this project
     ├── includes
     │   ├── __head.php              # Header page
     │   └── __nav.php               # Navigation bar
