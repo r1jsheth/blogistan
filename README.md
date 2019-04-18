@@ -9,12 +9,12 @@
     │   └── __nav.php               # Navigation bar
     ├── resources
     │   ├── ├── func
-    │   │   │   └── blog.php       # Contains main logic and fetch useful information from database
+    │   │   │   └── blog.php        # Contains main logic and fetch useful information from database
     │   │   ├── config.php          # Contains Database config settings
     │   └── └── init.php            # Initialise basic config settings
     ├── add_category.php
     ├── add_post.php
-    ├── blog.sql
+    ├── blog.sql                    # Run this file before anything else
     ├── category_list.php
     ├── category.php
     ├── delete_category.php
