@@ -3,9 +3,6 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 include_once('resources/init.php');
 
-
-
-
 $posts = get_posts(((isset($_GET['id'])) ? $_GET['id'] : null));
 
 ?>
@@ -30,7 +27,7 @@ $posts = get_posts(((isset($_GET['id'])) ? $_GET['id'] : null));
 
 				<?php
 				foreach ( $posts as $post ) {
-		//echo json_encode($post);
+					//echo json_encode($post);
 					if ( ! category_exists('name', $post ['name'] ) ){
 						$post['name'] = 'Uncategorised';
 					}

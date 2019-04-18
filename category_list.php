@@ -22,9 +22,9 @@
 			<?php include "includes/_nav.php" ?>
 			<hr>
 			<br>
-<?php 
-	foreach  ( get_categories() as $category ) {
-?>
+			<?php 
+				foreach  ( get_categories() as $category ) {
+			?>
 		<p><a href="category.php?id=<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a> - <a href="delete_category.php?id=<?php echo $category['id']; ?>">Delete</a></p>
 <?php
 		}
