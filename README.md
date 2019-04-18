@@ -9,7 +9,7 @@
     │   └── __nav.php               # Navigation bar
     ├── resources
     │   ├── ├── func
-    │   │   │   └── blog..php       # Contains main logic and fetch useful information from database
+    │   │   │   └── blog.php       # Contains main logic and fetch useful information from database
     │   │   ├── config.php          # Contains Database config settings
     │   └── └── init.php            # Initialise basic config settings
     ├── add_category.php
