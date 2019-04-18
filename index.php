@@ -49,7 +49,7 @@ $posts = get_posts(((isset($_GET['id'])) ? $_GET['id'] : null));
 						</small>
 						<p class="post-content"><?php 
 							if(isset($_GET['id'])){
-								
+								// nl2br adds </br> wherever '\n' is used.
 								echo nl2br($post['contents']);
 							}
 							else	echo substr(nl2br($post['contents']),0,60)."...";
