@@ -10,6 +10,8 @@ if(empty($_GET)){
 }
 else{
 	$posts = get_posts(null, $_GET['id']);
+	// $cat = get_categories($_GET['id']);
+	$cat = fun_get_category($_GET['id']);
 }
 
 
@@ -45,8 +47,11 @@ else{
 						
 						<h2><i class="icon-quote-left">&nbsp;&nbsp;</i><a href="index.php?id=<?php echo $post['post_id']; ?>"><?php echo $post['title']; ?></a></h2>
 						<small> Posted on <?php echo date('d-m-Y h:i:s', strtotime($posts[0]['date_posted'])); ?>
-						
-							in <a href="category.php?id=<?php echo $post['category_id']; ?>"><?php echo $post['name'];?></a>
+							in <a href="category.php?id=
+							<?php echo $post['category_id']; ?>">
+							
+							<?php echo $cat; ?> 
+						</a>
 						</small>
 						<p class="post-content"><?php echo nl2br($post['contents']);?></p>
 
