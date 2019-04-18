@@ -21,6 +21,8 @@ function add_post($title, $contents, $category) {
 			`title`			= '{$title}',
 			`contents`		= '{$contents}',
 			`date_posted`	= NOW()");
+
+	mysqli_close($conn);
 }
 
 function edit_post($id, $title, $contents, $category) {
@@ -36,6 +38,7 @@ function edit_post($id, $title, $contents, $category) {
 		`contents`	= '{$contents}'
 		WHERE `id` = {$id} ");
 
+	mysqli_close($conn);
 }
 
 // function delete($table, $id) {
@@ -44,7 +47,7 @@ function edit_post($id, $title, $contents, $category) {
 
 // 	$conn = mysqli_connect('localhost', 'root', 'root', 'blog');
 // 	mysqli_query($conn, "DELETE FROM `{$table}` WHERE `id` = {$id}");
-// }
+// }/.
 
 function fun_del_post($id) {
 	if ($id == null) {
@@ -60,6 +63,8 @@ function fun_del_post($id) {
 	else {
 		return mysqli_error($conn);
 	}
+
+	mysqli_close($conn);
 }
 
 
@@ -80,6 +85,8 @@ function fun_del_category($id = null){
 		return mysqli_error($conn);
 	}
 
+
+	mysqli_close($conn);
 }
 
 
@@ -107,6 +114,8 @@ function get_posts($id = null, $cat_id = null) {
 	}
 	
 	return $posts;
+
+	mysqli_close($conn);
 }
 
 function get_categories($id = null){
@@ -123,6 +132,8 @@ function get_categories($id = null){
 	}
 
 	return $categories;
+
+	mysqli_close($conn);
 }
 
 function fun_get_category($id = null){
@@ -138,6 +149,8 @@ function fun_get_category($id = null){
 	// echo "in function -- ";
 	// print_r ($category);
 	return $category;
+
+	mysqli_close($conn);
 }
 
 // For add_category
@@ -146,6 +159,8 @@ function fun_add_category($name){
 	$catName = $name;
 	$conn = mysqli_connect('localhost', 'root', 'root', 'blog');
 	mysqli_query($conn, "INSERT INTO categories SET name = '{$name}'");
+
+	mysqli_close($conn);
 }
 
 
@@ -158,4 +173,6 @@ function category_exists($value) {
 		if(strtolower($value) == strtolower($row['name']))	return true;
 	}
 	return false;
+
+	mysqli_close($conn);
 }
