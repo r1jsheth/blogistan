@@ -34,7 +34,7 @@ include_once('resources/init.php');
 							echo "Error occured while adding!";
 						}
 						else if ($_GET['type'] == 'edit') {
-							echo "Error while editing!";
+							echo "Error occured while submiting!";
 						}
 					?>
 						
