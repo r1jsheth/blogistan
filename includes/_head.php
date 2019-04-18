@@ -5,7 +5,7 @@
         <meta name="description" content="">
         
         <!--<meta name="viewport" content="width=device-width">-->
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> -->
         
         <!-- Styles -->
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
