@@ -4,15 +4,17 @@
 	include_once('resources/config.php'); 
 	include_once('resources/init.php'); 
 
-// if ( ! isset($_GET['id']) ) {
-// 	header('location: index.php');
-// 	die();
-// }
+// Check if id of post is set or not
+if ( ! isset($_GET['id']) ) {
+	header('location: index.php');
+	die();
+}
 
-print_r($_GET);
-fun_del_post($_GET['id']);
-
-//header('location: index.php');
-die();
+if(fun_del_post($_GET['id'])){
+	header('location: success.php?type=delete');
+}
+else{
+	header('location: error.php?type=delete');
+}
 
 ?>
