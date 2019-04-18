@@ -26,13 +26,16 @@ include_once('resources/init.php');
 				<br>
 				<div class="content">
 					<h2 align="center">
-						<?php
-					if ($_GET['type'] == 'delete') {
-						echo "Error occured while deleting!";
-					} 
-					else if ($_GET['type'] == 'add') {
-						echo "Error occured while adding!";
-					}
+					<?php
+						if ($_GET['type'] == 'delete') {
+							echo "Error occured while deleting!";
+						} 
+						else if ($_GET['type'] == 'add') {
+							echo "Error occured while adding!";
+						}
+						else if ($_GET['type'] == 'edit') {
+							echo "Error while editing!";
+						}
 					?>
 						
 					</h2>

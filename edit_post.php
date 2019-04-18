@@ -26,7 +26,7 @@
 		if ( empty($errors) ) {
 			edit_post($_GET['id'], $title, $contents, $_POST['category']);
 			#echo json_encode($post);
-			header('location: index.php?id=' . $post[0]['post_id']);
+			header('location: success.php?type=edit');
 			
 			die();
 		}

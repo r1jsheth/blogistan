@@ -32,6 +32,9 @@ include_once('resources/init.php');
 							}
 							else if ($_GET['type'] == 'add') {
 								echo "Added successfully";
+							} 
+							else if ($_GET['type'] == 'edit') {
+								echo "Edited successfully";
 							}
 						?>
 						
