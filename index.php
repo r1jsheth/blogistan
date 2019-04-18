@@ -40,9 +40,9 @@ $posts = get_posts(((isset($_GET['id'])) ? $_GET['id'] : null));
 								<?php echo $post['category_id']; ?>">
 								
 								<?php 
-									$cat = fun_get_category($post['category_id']);
+									$post_category = fun_get_category($post['category_id']);
 									// echo $post['name'];
-									echo $cat;
+									echo $post_category;
 								?>
 							
 							</a>
