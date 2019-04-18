@@ -38,13 +38,13 @@ function edit_post($id, $title, $contents, $category) {
 
 }
 
-function delete($table, $id) {
-	$table = mysqli_real_escape_string($conn, $table);
-	$id    = (int) $id;
+// function delete($table, $id) {
+// 	$table = mysqli_real_escape_string($conn, $table);
+// 	$id    = (int) $id;
 
-	$conn = mysqli_connect('localhost', 'root', 'root', 'blog');
-	mysqli_query($conn, "DELETE FROM `{$table}` WHERE `id` = {$id}");
-}
+// 	$conn = mysqli_connect('localhost', 'root', 'root', 'blog');
+// 	mysqli_query($conn, "DELETE FROM `{$table}` WHERE `id` = {$id}");
+// }
 
 function fun_del_post($id) {
 	if ($id == null) {
