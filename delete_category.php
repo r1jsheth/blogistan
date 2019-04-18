@@ -13,6 +13,9 @@ if (!isset($_GET['id']) ) {
 if(fun_del_category($_GET['id']) == true){
 	header('location: success.php?type=delete');
 }
+else{
+	header('location: error.php?type=delete');
+}
 
 // header('location: category_list.php');
 // die();
