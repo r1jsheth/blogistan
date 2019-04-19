@@ -36,6 +36,9 @@ include_once('resources/init.php');
 							else if ($_GET['type'] == 'edit') {
 								echo "Edited successfully";
 							}
+							else{
+								echo "Done! Head over to Home!";
+							}
 						?>
 						
 					</h2>

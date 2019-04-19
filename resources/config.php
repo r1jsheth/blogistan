@@ -9,9 +9,9 @@ $config['db_user'] = 'root';
 $config['db_pass'] = 'root';
 $config['db_name'] = 'blog';
 
-foreach ( $config as $k => $v ){
-	define(strtoupper($k), $v);
-}
+// foreach ( $config as $k => $v ){
+// 	define(strtoupper($k), $v);
+// }
 
 // change according to you configuration
 // $conn = mysqli_connect('localhost', $username, $pass, $dbname);

@@ -13,13 +13,13 @@
 		$contents 	= trim($_POST['contents']);
 
 		if ( empty($title)) {
-			$errors[] = 'You need to supply a title';
+			$errors[] = 'You need to input a title';
 		} 
 		else if ( strlen($title) > 255 ){
 			$errors[] = 'The title can not be longer than 255 characters';	
 		}
 		if ( empty($contents) ) {
-			$errors[] = 'You need to supply some text';
+			$errors[] = 'You need to input some text';
 		}
 		// if ( ! category_exists($_POST['category']) ){
 		// 	print_r($_POST);
@@ -31,7 +31,7 @@
 
 			$id = mysqli_insert_id($conn);
 
-			header('location success.php?type=add');
+			header('location: success.php?type=add');
 		}
 	}
 ?>

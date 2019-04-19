@@ -28,7 +28,7 @@ if ( isset($_POST['name']) && !empty($_POST['name']) ) {
 
 	if (empty($error)) {
 		fun_add_category($catName);
-		header("Location: success.php?type=add");
+		header("location: success.php?type=add");
 	}
 }
 
@@ -58,7 +58,7 @@ if ( isset($_POST['name']) && !empty($_POST['name']) ) {
 			<br>
 			<form method="post">
 					<div>
-						<label class="control-label" for="inputError"> Name </label>
+						<label class="control-label" for="inputError"><h3> Name</h3> </label>
 						<input type="text" name="name" value="">
 						<?php
 							if (!empty($error)) {
