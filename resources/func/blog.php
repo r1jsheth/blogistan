@@ -58,13 +58,15 @@ function fun_del_post($id) {
 
 	$conn = mysqli_connect('localhost', 'root', 'root', 'blog');
 	if (mysqli_query($conn, $query)) {
+		mysqli_close($conn);
 		return true;
 	} 
 	else {
+		mysqli_close($conn);
 		return mysqli_error($conn);
 	}
 
-	mysqli_close($conn);
+	
 }
 
 
@@ -79,14 +81,16 @@ function fun_del_category($id = null){
 
 	$conn = mysqli_connect('localhost', 'root', 'root', 'blog');
 	if (mysqli_query($conn, $query)) {
+		mysqli_close($conn);
 		return true;
 	} 
 	else {
+		mysqli_close($conn);
 		return mysqli_error($conn);
 	}
 
 
-	mysqli_close($conn);
+	
 }
 
 
@@ -112,10 +116,11 @@ function get_posts($id = null, $cat_id = null) {
 	while ($row = mysqli_fetch_assoc($resultSet) ) {
 		$posts[] = $row;
 	}
-	
-	return $posts;
 
 	mysqli_close($conn);
+	return $posts;
+
+	
 }
 
 function get_categories($id = null){
@@ -131,9 +136,10 @@ function get_categories($id = null){
 		$categories[] = $row;
 	}
 
+	mysqli_close($conn);
 	return $categories;
 
-	mysqli_close($conn);
+	
 }
 
 function fun_get_category($id = null){
