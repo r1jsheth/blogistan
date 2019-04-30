@@ -10,6 +10,7 @@ $posts = get_posts(((isset($_GET['id'])) ? $_GET['id'] : null));
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
 	<title>Blogistan</title>
 	<?php include "includes/_head.php" ?>
